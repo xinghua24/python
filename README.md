@@ -12,6 +12,16 @@ print("hello", "python", "3", sep="****")   # hello****python****3
 print("hello", "python", "3", sep="")    # hellopython3
 print("hello", "python", "3", sep="\n")
 ```
+**Build-in Types**<br>
+Python has 5 standard data types
+* Numbers
+* String
+* List
+* Tuple
+* Dictionary
+
+There are three distinct numeric types: integers, floating point numbers, and complex numbers.
+Sequence types are list, tuple and range.
 
 **use type() to get object type**<br> 
 type() is also a build-in function. [type() reference](https://docs.python.org/3/library/functions.html#type)
@@ -31,4 +41,4 @@ greeting[0]    # 'H'
 
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
-* [Python ]
+* [Tutorialpoint Python](https://www.tutorialspoint.com/python/index.htm)
