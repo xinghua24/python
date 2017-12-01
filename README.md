@@ -1,5 +1,4 @@
-Intro
-====================================================
+# Intro
 **print()**<br>
 print objects. print() is a build-in function. [print() reference](https://docs.python.org/3.6/library/functions.html#print)
 ```py
@@ -59,8 +58,27 @@ numbers = (45,47,265,13)
 # Dictionary - like a Map
 gpas = {"Name": "Mark", "GPA": 3.55}
 print(gpas)
-
 ```
+
+**Getting input**<br>
+Use input([promp]) build-in function to get input. [input reference](https://docs.python.org/3/library/functions.html#input)
+```py
+# getting input
+inputString = input("please enter a string")
+
+# It is useful to keep window open after script complete execution
+input("press close to exit")
+```
+
+## Function
+Functions are defined using 'def'
+```py
+def printGreetings(name):
+	print("Hello %s!" % (name))
+
+printGreetings("Alice")    # Hello Alice!
+```
+
 
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
