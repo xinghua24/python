@@ -2,7 +2,7 @@ Intro
 ====================================================
 **print()**<br>
 print objects. print() is a build-in function. [print() reference](https://docs.python.org/3.6/library/functions.html#print)
-```python
+```py
 print("hello python")
 print("hello", "python")
 print(234.56)
@@ -21,23 +21,46 @@ Python has 5 standard data types
 * Dictionary
 
 There are three distinct numeric types: integers, floating point numbers, and complex numbers.
-Sequence types are list, tuple and range.
+list, tuple and range are sequence types.
 
 **use type() to get object type**<br> 
 type() is also a build-in function. [type() reference](https://docs.python.org/3/library/functions.html#type)
-```python
+```py
 type(123)    # <class 'int'>
 type(123.45)    # <class 'float'>
 type("foo")    # <class 'str'>
 ```
 
-**Text sequence type - str**<br>
+**String**<br>
 [str reference](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
-```python
+```py
 greeting = "Hello World"
-greeting[0]    # 'H'
+print(greeting[0])    #'H
+print(greeting[0:3])    # Hel
+
+# String concat
+print( "Hello" + " " + "World" )    # Hello World
+
+# formatting
+print("My name is %s and I am %d years old" % ("Mark", 42))    # My name is Mark and I am 42 years old
 ```
 
+**List, Tuple and Dictionary**<br>
+```py
+# List
+people = ["Mark", "Brett", "Kerri", "Joan", "Rick", "Rose"]
+print(people[0])    # Mark
+people[1] = "B-man"    # change list item value
+
+
+# Tuple - tuple is like list.'tuple' object does not support item assignment
+numbers = (45,47,265,13)
+
+# Dictionary - like a Map
+gpas = {"Name": "Mark", "GPA": 3.55}
+print(gpas)
+
+```
 
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
