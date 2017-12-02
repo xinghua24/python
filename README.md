@@ -1,4 +1,5 @@
 # Intro
+
 **print()**<br>
 print objects. print() is a build-in function. [print() reference](https://docs.python.org/3.6/library/functions.html#print)
 ```py
@@ -35,6 +36,8 @@ type("foo")    # <class 'str'>
 ```py
 greeting = "Hello World"
 print(greeting[0])    #'H
+
+# slicing
 print(greeting[0:3])    # Hel
 
 # String concat
@@ -42,11 +45,20 @@ print( "Hello" + " " + "World" )    # Hello World
 
 # formatting
 print("My name is %s and I am %d years old" % ("Mark", 42))    # My name is Mark and I am 42 years old
+
+# len()
+greetings = 'Hello Python'
+print(len(greetings))
+
+# .find()
+print(greetings.find("Py"))
+
+
 ```
 
 **List, Tuple and Dictionary**<br>
 ```py
-# List
+# List - List are mutable
 people = ["Mark", "Brett", "Kerri", "Joan", "Rick", "Rose"]
 print(people[0])    # Mark
 people[1] = "B-man"    # change list item value
@@ -79,6 +91,29 @@ def printGreetings(name):
 printGreetings("Alice")    # Hello Alice!
 ```
 
+## Control Statemen   t
+If Statement
+```py
+x = input("x:")
+y = input("y:")
+if x < y:
+    print('x is less than y')
+elif x > y:
+    print('x is greater than y')
+else:
+    print('x and y are equal')
+```
+
+While Statement
+```py
+def countdown(n):
+    while n > 0:
+        print(n)
+        n = n -1
+    print('Blastoff!')
+
+countdown(5)
+```
 
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
