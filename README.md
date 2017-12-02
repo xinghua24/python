@@ -1,4 +1,4 @@
-# Intro
+# Python Intro
 
 **print()**<br>
 print objects. print() is a build-in function. [print() reference](https://docs.python.org/3.6/library/functions.html#print)
@@ -64,12 +64,13 @@ print(people[0])    # Mark
 people[1] = "B-man"    # change list item value
 
 
-# Tuple - tuple is like list.'tuple' object does not support item assignment
+# Tuple - tuple is like a immutable list.
 numbers = (45,47,265,13)
+print(numbers[0])
 
 # Dictionary - like a Map
 gpas = {"Name": "Mark", "GPA": 3.55}
-print(gpas)
+print(gpas['GPA'])
 ```
 
 **Getting input**<br>
@@ -113,6 +114,22 @@ def countdown(n):
     print('Blastoff!')
 
 countdown(5)
+```
+
+## Files
+```py
+# write file
+myfile = open('output.txt', 'w')
+myfile.write("ABC\n")
+myfile.write("DEF\n")
+myfile.close()
+
+# read file
+myfile = open('output.txt', 'r')
+content = myfile.read()
+print(content)
+myfile.close()
+
 ```
 
 Referenc:
