@@ -1,4 +1,21 @@
-# Python Intro
+Table Of Content
+
+<!-- toc -->
+
+- [Intro](#intro)
+- [String](#string)
+  * [List](#list)
+  * [Tuplue](#tuplue)
+  * [Dicutionary](#dicutionary)
+  * [Function](#function)
+  * [Control Statement](#control-statement)
+    + [If Statement](#if-statement)
+    + [While Statement](#while-statement)
+  * [Files](#files)
+
+<!-- tocstop -->
+
+# Intro
 
 **print()**<br>
 print objects. print() is a build-in function. [print() reference](https://docs.python.org/3.6/library/functions.html#print)
@@ -31,7 +48,18 @@ type(123.45)    # <class 'float'>
 type("foo")    # <class 'str'>
 ```
 
-**String**<br>
+
+**Getting input**<br>
+Use input([promp]) build-in function to get input. [input reference](https://docs.python.org/3/library/functions.html#input)
+```py
+# getting input
+inputString = input("please enter a string")
+
+# It is useful to keep window open after script complete execution
+input("press close to exit")
+```
+
+# String
 [str reference](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
 ```py
 greeting = "Hello World"
@@ -52,36 +80,30 @@ print(len(greetings))
 
 # .find()
 print(greetings.find("Py"))
-
-
 ```
 
-**List, Tuple and Dictionary**<br>
+## List
+List - List are mutable
 ```py
-# List - List are mutable
 people = ["Mark", "Brett", "Kerri", "Joan", "Rick", "Rose"]
 print(people[0])    # Mark
 people[1] = "B-man"    # change list item value
+```
 
-
-# Tuple - tuple is like a immutable list.
+## Tuplue
+Tuple - tuple is like a immutable list.
+```py
 numbers = (45,47,265,13)
 print(numbers[0])
+```
 
-# Dictionary - like a Map
+## Dicutionary
+Dictionary - like a Map
+```py
 gpas = {"Name": "Mark", "GPA": 3.55}
 print(gpas['GPA'])
 ```
 
-**Getting input**<br>
-Use input([promp]) build-in function to get input. [input reference](https://docs.python.org/3/library/functions.html#input)
-```py
-# getting input
-inputString = input("please enter a string")
-
-# It is useful to keep window open after script complete execution
-input("press close to exit")
-```
 
 ## Function
 Functions are defined using 'def'
@@ -92,8 +114,8 @@ def printGreetings(name):
 printGreetings("Alice")    # Hello Alice!
 ```
 
-## Control Statemen   t
-If Statement
+## Control Statement
+### If Statement
 ```py
 x = input("x:")
 y = input("y:")
@@ -105,7 +127,7 @@ else:
     print('x and y are equal')
 ```
 
-While Statement
+### While Statement
 ```py
 def countdown(n):
     while n > 0:
@@ -135,3 +157,4 @@ myfile.close()
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
 * [Tutorialpoint Python](https://www.tutorialspoint.com/python/index.htm)
+* [Python 语法速览与实战清单](https://segmentfault.com/a/1190000012129654)
