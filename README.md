@@ -4,14 +4,15 @@ Table Of Content
 
 - [Intro](#intro)
 - [String](#string)
+- [List, Tuple and Dictionary](#list-tuple-and-dictionary)
   * [List](#list)
   * [Tuplue](#tuplue)
   * [Dicutionary](#dicutionary)
-  * [Function](#function)
-  * [Control Statement](#control-statement)
-    + [If Statement](#if-statement)
-    + [While Statement](#while-statement)
-  * [Files](#files)
+- [Control Statement](#control-statement)
+  * [If Statement](#if-statement)
+  * [While Statement](#while-statement)
+- [Function](#function)
+- [Files](#files)
 
 <!-- tocstop -->
 
@@ -82,6 +83,7 @@ print(len(greetings))
 print(greetings.find("Py"))
 ```
 
+# List, Tuple and Dictionary
 ## List
 List - List are mutable
 ```py
@@ -105,17 +107,8 @@ print(gpas['GPA'])
 ```
 
 
-## Function
-Functions are defined using 'def'
-```py
-def printGreetings(name):
-	print("Hello %s!" % (name))
-
-printGreetings("Alice")    # Hello Alice!
-```
-
-## Control Statement
-### If Statement
+# Control Statement
+## If Statement
 ```py
 x = input("x:")
 y = input("y:")
@@ -127,7 +120,7 @@ else:
     print('x and y are equal')
 ```
 
-### While Statement
+## While Statement
 ```py
 def countdown(n):
     while n > 0:
@@ -138,7 +131,18 @@ def countdown(n):
 countdown(5)
 ```
 
-## Files
+
+
+# Function
+Functions are defined using 'def'
+```py
+def printGreetings(name):
+	print("Hello %s!" % (name))
+
+printGreetings("Alice")    # Hello Alice!
+```
+
+# Files
 ```py
 # write file
 myfile = open('output.txt', 'w')
