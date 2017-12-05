@@ -8,17 +8,20 @@ Table Of Content
   * [List](#list)
   * [Tuplue](#tuplue)
   * [Dicutionary](#dicutionary)
-- [Control Statement](#control-statement)
+- [Control Statement and Iterator](#control-statement-and-iterator)
   * [If Statement](#if-statement)
   * [While Statement](#while-statement)
+  * [For loop](#for-loop)
 - [Function](#function)
 - [Files](#files)
+- [Module](#module)
+- [Subprocess](#subprocess)
 
 <!-- tocstop -->
 
 # Intro
 
-## Comment
+**Comment**<br>
 ```py
 """ Multiline strings can be written
     using three "s, and are often used
@@ -215,6 +218,36 @@ print(dir(math))
 Any file that contains Python code can be imported as a module. importing a module will execute the code in that file.
 ```py
 import linecount
+```
+
+# Class
+You can assign attributes to an Object. functions defined in an class should have a 'self' 
+reference to the instance by convention. It can be named differently but not recommended.
+```py
+class Time:
+    """Represents the time of day.
+    """
+    def print_time(self):
+        print('%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second))
+time = Time()
+time.hour = 11
+time.minute = 59
+time.second = 30
+
+time.print_time()  # => 11:59:30
+```
+
+
+**init method**<br>
+the init method is __init__(two underscore characters, followed by init, and then two more underscores)
+```py
+    def __init__(self, hour=0, minute=0, second=0):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+
+# calling initializer
+time = Time(5,30,0)
 ```
 
 # Subprocess
