@@ -220,6 +220,15 @@ Any file that contains Python code can be imported as a module. importing a modu
 import linecount
 ```
 
+**main**<br>
+```py
+if __name__ == '__main__':
+    print("in main method") # => in main method
+```
+The above code snippe is used quite often. It checks if a module is being imported or not.
+
+In other words, the code within the 'if' block will be executed only when the code runs directly. Here 'directly' means 'not imported'.
+
 # Class
 You can assign attributes to an Object. functions defined in an class should have a 'self' 
 reference to the instance by convention. It can be named differently but not recommended.
@@ -249,6 +258,7 @@ the init method is __init__(two underscore characters, followed by init, and the
 # calling initializer
 time = Time(5,30,0)
 ```
+
 
 # Subprocess
 The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. 
