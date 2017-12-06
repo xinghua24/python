@@ -15,6 +15,7 @@ Table Of Content
 - [Function](#function)
 - [Files](#files)
 - [Module](#module)
+- [Class](#class)
 - [Subprocess](#subprocess)
 
 <!-- tocstop -->
@@ -235,6 +236,7 @@ reference to the instance by convention. It can be named differently but not rec
 ```py
 class Time:
     """Represents the time of day.
+    attributes are hour, minute and second 
     """
     def print_time(self):
         print('%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second))
@@ -259,6 +261,53 @@ the init method is __init__(two underscore characters, followed by init, and the
 time = Time(5,30,0)
 ```
 
+**toString method**<br>
+__str__ is supposed to return a string representation of an object.
+```py
+    def __str__(self):
+        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+```
+
+**Inheritance**<br>
+syntax
+```py
+class BaseClass:
+  Body of base class
+class DerivedClass(BaseClass):
+  Body of derived class
+```
+
+Sample
+```py
+class Polygon:
+    def __init__(self, no_of_sides):
+        self.n = no_of_sides
+        self.sides = [0 for i in range(no_of_sides)]
+
+    def inputSides(self):
+        self.sides = [float(input("Enter side "+str(i+1)+" : ")) for i in range(self.n)]
+
+    def dispSides(self):
+        for i in range(self.n):
+            print("Side",i+1,"is",self.sides[i])
+
+class Triangle(Polygon):
+    def __init__(self):
+        Polygon.__init__(self,3)
+
+    def findArea(self):
+        a, b, c = self.sides
+        # calculate the semi-perimeter
+        s = (a + b + c) / 2
+        area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+        print('The area of the triangle is %0.2f' %area)
+
+if __name__ == '__main__':
+    tri = Triangle()
+    tri.inputSides()
+    tri.dispSides()
+    tri.findArea()
+```
 
 # Subprocess
 The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. 
@@ -273,5 +322,6 @@ subprocess.call(['ls', '-l'], shell=True)
 Referenc:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
 * [Tutorialpoint Python](https://www.tutorialspoint.com/python/index.htm)
+* [Excellent - programiz Python Programming](https://www.programiz.com/python-programming)
 * [Learn x in y minutes - python](https://learnxinyminutes.com/docs/python3/)
 * [Python 语法速览与实战清单](https://segmentfault.com/a/1190000012129654)
