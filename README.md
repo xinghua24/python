@@ -166,7 +166,9 @@ printGreetings("Alice")    # => Hello Alice!
 ```
 
 # Files
-read file and write file
+By default, files are open in reading mode. modes are 'r', 'w', 'x'(exclusive creation), 'a', 'b', '+'(reading and writing).
+
+read file and write file.
 ```py
 # write file
 myfile = open('output.txt', 'w')
@@ -181,6 +183,17 @@ print(content)
 myfile.close()
 ```
 
+<br>
+With statement
+```py
+with open('sample.txt', 'w') as myFile:
+    myFile.write("ABC\n")
+    myFile.write("DEF\n")
+    
+with open('sample.txt', 'r') as myFile:
+    print(myFile.read())
+
+```
 
 **Read file line by line**<br>
 ```py
@@ -193,9 +206,11 @@ def linecount(filename):
 print(linecount('linecount.py'))
 ```
 
+Reference:
+* [Python Tutorial - File operation](https://www.programiz.com/python-programming/file-operation)
+
 
 # Module
-
 **Importing a Module**<br>
 ```py
 # import a module
@@ -311,18 +326,20 @@ if __name__ == '__main__':
 ```
 
 # Subprocess
+
+
 The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. 
 ```py
 import subprocess
 
 subprocess.call(['ls', '-l'], shell=True)
 ```
-[subprocess reference](https://docs.python.org/3/library/subprocess.html#module-subprocess)
 
 
+[subprocess reference](https://docs.python.org/3/library/subprocess.html#module-subprocess) <br>
 
 # os.path
-[os.path module reference](https://docs.python.org/3/library/os.path.html)<br>
+
 
 when a module is loaded in python, \_\_file\_\_ is set to its name.
 ```py
@@ -341,6 +358,9 @@ print(os.path.dirname(os.path.realpath(__file__)))
 print(os.path.abspath(os.path.dirname(__file__)))
 ```
 
+[os.path module reference](https://docs.python.org/3/library/os.path.html)<br>
+
+<br>
 Reference:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
 * [Tutorialpoint Python](https://www.tutorialspoint.com/python/index.htm)
