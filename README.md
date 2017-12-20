@@ -1,24 +1,25 @@
 Table Of Content
 
-<!-- toc -->
+<!-- TOC -->
 
 - [Intro](#intro)
 - [String](#string)
 - [List, Tuple and Dictionary](#list-tuple-and-dictionary)
-  * [List](#list)
-  * [Tuplue](#tuplue)
-  * [Dicutionary](#dicutionary)
+    - [List](#list)
+    - [Tuplue](#tuplue)
+    - [Dicutionary](#dicutionary)
 - [Control Statement and Iterator](#control-statement-and-iterator)
-  * [If Statement](#if-statement)
-  * [While Statement](#while-statement)
-  * [For loop](#for-loop)
+    - [If Statement](#if-statement)
+    - [While Statement](#while-statement)
+    - [For loop](#for-loop)
 - [Function](#function)
 - [Files](#files)
 - [Module](#module)
 - [Class](#class)
 - [Subprocess](#subprocess)
+- [os.path](#ospath)
 
-<!-- tocstop -->
+<!-- /TOC -->
 
 # Intro
 
@@ -319,7 +320,28 @@ subprocess.call(['ls', '-l'], shell=True)
 [subprocess reference](https://docs.python.org/3/library/subprocess.html#module-subprocess)
 
 
-Referenc:
+
+# os.path
+[os.path module reference](https://docs.python.org/3/library/os.path.html)<br>
+
+when a module is loaded in python, \_\_file\_\_ is set to its name.
+```py
+import os.path
+
+# name of module
+print(__file__) 
+
+# directory where program resides
+print(os.path.join(os.path.dirname(__file__), '..'))
+
+# cannonicalised directory where theprogram resides
+print(os.path.dirname(os.path.realpath(__file__)))
+
+# absolute path of the directory where the program resides
+print(os.path.abspath(os.path.dirname(__file__)))
+```
+
+Reference:
 * [Python 3 for Beginners Video Tutorial](https://www.safaribooksonline.com/library/view/python-3-for/12071LTPPY17/)
 * [Tutorialpoint Python](https://www.tutorialspoint.com/python/index.htm)
 * [Excellent - programiz Python Programming](https://www.programiz.com/python-programming)

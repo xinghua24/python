@@ -1,6 +1,6 @@
 class Time:
     """Represents the time of day.
-    attributes are hour, minute and second
+    attributes are hour, minute and second 
     """
     def __init__(self, hour=0, minute=0, second=0):
         self.hour = hour
