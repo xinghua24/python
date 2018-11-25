@@ -18,6 +18,7 @@ Table Of Content
 - [Class](#class)
 - [Subprocess](#subprocess)
 - [os.path](#ospath)
+- [GUI Programming](#gui-programming)
 
 <!-- /TOC -->
 
@@ -359,6 +360,52 @@ print(os.path.abspath(os.path.dirname(__file__)))
 ```
 
 [os.path module reference](https://docs.python.org/3/library/os.path.html)<br>
+
+
+
+# GUI Programming
+* [Derek Banas - Learn to Program 20 : TkInter Tutorial](https://www.youtube.com/watch?v=-tbWoZSi3LU)
+
+installation
+```
+sudo apt-get install python3-tk
+```
+
+
+To test if Tkinter is working
+```py
+import tkinter
+
+tkinter._test()
+```
+
+
+see gui.py
+```py
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+
+root.title('Hello, Tkinter!')
+root.geometry('300x400')
+
+frame = Frame(root)
+
+labelText = StringVar()
+labelText.set("I am a Label")
+label = Label(frame, textvariable=labelText)
+
+
+button = Button(frame, text="Click Me")
+
+
+label.pack()
+button.pack()
+frame.pack()
+
+root.mainloop()
+```
 
 <br>
 Reference:
